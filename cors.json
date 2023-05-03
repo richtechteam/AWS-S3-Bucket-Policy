@@ -1,0 +1,12 @@
+[
+  {
+    "AllowedHeaders": ["*"],
+    "AllowedMethods": ["GET", "PUT", "POST", "DELETE"],
+    "AllowedOrigins": [
+      "https://domain1.com",
+      "http://domain2.com"
+     
+    ],
+    "ExposeHeaders": []
+  }
+]

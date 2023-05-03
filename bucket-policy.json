@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowGetAndPutFromSpecificDomains",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Resource": "arn:aws:s3:::<your-bucket-name>/*",
+      "Condition": {
+        "StringLike": {
+          "aws:Referer": [
+            "https://domain1.com/*",
+            "http://domain2.com/*"
+          ]
+        }
+      }
+    }
+  ]
+}
